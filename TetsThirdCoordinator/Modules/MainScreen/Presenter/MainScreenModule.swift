@@ -9,7 +9,7 @@ import UIKit
 
 protocol MainScreenModuleOutput: AnyObject {
     
-    /// func coordinator
+    /// func  on coordinator
     func showNewScreenButtonActoin()
 }
 
