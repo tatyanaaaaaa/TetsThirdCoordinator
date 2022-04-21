@@ -23,6 +23,8 @@ protocol MainScreenFactoryInput: AnyObject {
 
 final class MainScreenFactory: MainScreenFactoryInput {
 
+    // MARK: - Internal property
+    
     weak var output: MainScreenFactoryOutput?
     
     func didGetText(text: String) {
@@ -30,6 +32,8 @@ final class MainScreenFactory: MainScreenFactoryInput {
         output?.didReciveFullText(text: appearents)
     }
 }
+
+// MARK: - Private extention: MainScreenFactory
 
 private extension MainScreenFactory {
     struct Appearents {

@@ -10,7 +10,8 @@ import UIKit
 protocol MainScreenViewOutput: AnyObject {
     
     /// Пользователь нажал на кнопку
-    func pushButtonAction()
+    func pushChangeColorButtonAction()
+    
 }
 
 protocol MainScreenViewInput: AnyObject {
@@ -25,10 +26,16 @@ protocol MainScreenViewInput: AnyObject {
 
 final class MainScreenView: UIView & MainScreenViewInput {
     
+    // MARK: - Internal property
+    
     weak var output: MainScreenViewOutput?
+    
+    // MARK: - Private property
     
     private let textLabel = UILabel()
     private let pushButton = UIButton()
+    
+    // MARK: - Internal func
     
     override init(frame: CGRect) {
         super .init(frame: frame)
@@ -45,9 +52,13 @@ final class MainScreenView: UIView & MainScreenViewInput {
                                   blue: CGFloat.random(in: 0...1), alpha: 1)
     }
     
+    // MARK: - Public func
+    
     public func setupText(text: String) {
         textLabel.text = text
     }
+    
+    // MARK: - Private func
     
     private func setupDefaultSettings() {
         backgroundColor = .white
@@ -57,8 +68,8 @@ final class MainScreenView: UIView & MainScreenViewInput {
         pushButton.addTarget(self, action: #selector(pushButtonAction), for: .touchUpInside)
     }
     
-    @objc func pushButtonAction() {
-        output?.pushButtonAction()
+    @objc private func pushButtonAction() {
+        output?.pushChangeColorButtonAction()
     }
     
     private func setupConstraints() {
@@ -76,6 +87,8 @@ final class MainScreenView: UIView & MainScreenViewInput {
         ])
     }
 }
+
+// MARK: - Private extention: MainScreenView
 
 private extension MainScreenView {
     struct Appearents {

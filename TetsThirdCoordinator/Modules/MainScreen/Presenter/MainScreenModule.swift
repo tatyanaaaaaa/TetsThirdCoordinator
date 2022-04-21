@@ -9,6 +9,8 @@ import UIKit
 
 protocol MainScreenModuleOutput: AnyObject {
     
+    /// func coordinator
+    func showNewScreenButtonActoin()
 }
 
 protocol MainScreenModuleInput: AnyObject {
@@ -19,11 +21,17 @@ typealias MainScreenModuleViewController = UIViewController & MainScreenModuleIn
 
 final class MainScreenModule: MainScreenModuleViewController {
     
+    // MARK: - Internal property
+    
     weak var moduleOutput: MainScreenModuleOutput?
+    
+    // MARK: - Private property
     
     private let moduleView: MainScreenViewInput & UIView
     private let interactor: MainScreenInteractorInput
     private let factory: MainScreenFactoryInput
+    
+    // MARK: - Initialization
     
     init(moduleView: MainScreenViewInput & UIView, interactor: MainScreenInteractorInput,
          factory: MainScreenFactoryInput) {
@@ -37,6 +45,8 @@ final class MainScreenModule: MainScreenModuleViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal func
+    
     override func loadView() {
         super.loadView()
         view = moduleView
@@ -45,16 +55,20 @@ final class MainScreenModule: MainScreenModuleViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.getContent()
-        
+        title = Appearents().titleLabel
     }
-    
 }
 
+// MARK: - Private extention: MainScreenViewOutput
+
 extension MainScreenModule: MainScreenViewOutput {
-    func pushButtonAction() {
+    func pushChangeColorButtonAction() {
         moduleView.changeBackgroundColors()
+        moduleOutput?.showNewScreenButtonActoin()
     }
 }
+
+// MARK: - Private extention: MainScreenFactoryOutput
 
 extension MainScreenModule: MainScreenFactoryOutput {
     func didReciveFullText(text: String) {
@@ -62,11 +76,15 @@ extension MainScreenModule: MainScreenFactoryOutput {
     }
 }
 
+// MARK: - Private extention: MainScreenInteractorOutput
+
 extension MainScreenModule: MainScreenInteractorOutput {
     func didRecive(text: String) {
         factory.didGetText(text: text)
     }
 }
+
+// MARK: - Private extention: MainScreenModule
 
 private extension MainScreenModule {
     struct Appearents {
