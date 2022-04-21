@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		6C51EF7F28116C4000B77BED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EF7E28116C4000B77BED /* AppDelegate.swift */; };
 		6C51EF8128116C4000B77BED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EF8028116C4000B77BED /* SceneDelegate.swift */; };
-		6C51EF8328116C4000B77BED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EF8228116C4000B77BED /* ViewController.swift */; };
 		6C51EF8628116C4000B77BED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C51EF8428116C4000B77BED /* Main.storyboard */; };
 		6C51EF8828116C4000B77BED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C51EF8728116C4000B77BED /* Assets.xcassets */; };
 		6C51EF8B28116C4000B77BED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C51EF8928116C4000B77BED /* LaunchScreen.storyboard */; };
+		6C51EFA228116D0B00B77BED /* MainScreenModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EFA128116D0B00B77BED /* MainScreenModule.swift */; };
+		6C51EFA428116D7800B77BED /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EFA328116D7800B77BED /* MainScreenView.swift */; };
+		6C51EFA628116DAF00B77BED /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EFA528116DAF00B77BED /* MainScreenInteractor.swift */; };
+		6C51EFA828116DD600B77BED /* MainScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EFA728116DD600B77BED /* MainScreenFactory.swift */; };
+		6C51EFAA28116DFB00B77BED /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EFA928116DFB00B77BED /* MainScreenAssembly.swift */; };
+		6C51EFAC2811748A00B77BED /* DetailScreenModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EFAB2811748A00B77BED /* DetailScreenModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C51EF7B28116C4000B77BED /* TetsThirdCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TetsThirdCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C51EF7E28116C4000B77BED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C51EF8028116C4000B77BED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C51EF8228116C4000B77BED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C51EF8528116C4000B77BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C51EF8728116C4000B77BED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C51EF8A28116C4000B77BED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C51EF8C28116C4000B77BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C51EFA128116D0B00B77BED /* MainScreenModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModule.swift; sourceTree = "<group>"; };
+		6C51EFA328116D7800B77BED /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		6C51EFA528116DAF00B77BED /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		6C51EFA728116DD600B77BED /* MainScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenFactory.swift; sourceTree = "<group>"; };
+		6C51EFA928116DFB00B77BED /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		6C51EFAB2811748A00B77BED /* DetailScreenModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,140 @@
 		6C51EF7D28116C4000B77BED /* TetsThirdCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				6C51EF7E28116C4000B77BED /* AppDelegate.swift */,
-				6C51EF8028116C4000B77BED /* SceneDelegate.swift */,
-				6C51EF8228116C4000B77BED /* ViewController.swift */,
-				6C51EF8428116C4000B77BED /* Main.storyboard */,
-				6C51EF8728116C4000B77BED /* Assets.xcassets */,
-				6C51EF8928116C4000B77BED /* LaunchScreen.storyboard */,
+				6C51EF9428116C8400B77BED /* Modules */,
+				6C51EF9328116C7A00B77BED /* Navigation */,
+				6C51EF9228116C7300B77BED /* System */,
 				6C51EF8C28116C4000B77BED /* Info.plist */,
 			);
 			path = TetsThirdCoordinator;
+			sourceTree = "<group>";
+		};
+		6C51EF9228116C7300B77BED /* System */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EF7E28116C4000B77BED /* AppDelegate.swift */,
+				6C51EF8028116C4000B77BED /* SceneDelegate.swift */,
+				6C51EF8428116C4000B77BED /* Main.storyboard */,
+				6C51EF8728116C4000B77BED /* Assets.xcassets */,
+				6C51EF8928116C4000B77BED /* LaunchScreen.storyboard */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		6C51EF9328116C7A00B77BED /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		6C51EF9428116C8400B77BED /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EF9B28116CD600B77BED /* DetailScreen */,
+				6C51EF9A28116CC800B77BED /* MainScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6C51EF9528116CA200B77BED /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EFA928116DFB00B77BED /* MainScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		6C51EF9628116CA900B77BED /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EFA728116DD600B77BED /* MainScreenFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		6C51EF9728116CB200B77BED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EFA528116DAF00B77BED /* MainScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6C51EF9828116CBA00B77BED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EFA328116D7800B77BED /* MainScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C51EF9928116CBE00B77BED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EFA128116D0B00B77BED /* MainScreenModule.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6C51EF9A28116CC800B77BED /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EF9928116CBE00B77BED /* Presenter */,
+				6C51EF9828116CBA00B77BED /* View */,
+				6C51EF9728116CB200B77BED /* Interactor */,
+				6C51EF9628116CA900B77BED /* Factory */,
+				6C51EF9528116CA200B77BED /* Assembly */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		6C51EF9B28116CD600B77BED /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EFA028116CF700B77BED /* Presenter */,
+				6C51EF9F28116CF100B77BED /* View */,
+				6C51EF9E28116CEB00B77BED /* Interactor */,
+				6C51EF9D28116CE500B77BED /* Factory */,
+				6C51EF9C28116CDD00B77BED /* Assembly */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		6C51EF9C28116CDD00B77BED /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		6C51EF9D28116CE500B77BED /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		6C51EF9E28116CEB00B77BED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6C51EF9F28116CF100B77BED /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C51EFA028116CF700B77BED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6C51EFAB2811748A00B77BED /* DetailScreenModule.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C51EF8328116C4000B77BED /* ViewController.swift in Sources */,
+				6C51EFAA28116DFB00B77BED /* MainScreenAssembly.swift in Sources */,
+				6C51EFA628116DAF00B77BED /* MainScreenInteractor.swift in Sources */,
 				6C51EF7F28116C4000B77BED /* AppDelegate.swift in Sources */,
 				6C51EF8128116C4000B77BED /* SceneDelegate.swift in Sources */,
+				6C51EFAC2811748A00B77BED /* DetailScreenModule.swift in Sources */,
+				6C51EFA828116DD600B77BED /* MainScreenFactory.swift in Sources */,
+				6C51EFA228116D0B00B77BED /* MainScreenModule.swift in Sources */,
+				6C51EFA428116D7800B77BED /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,19 +432,19 @@
 				INFOPLIST_FILE = TetsThirdCoordinator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Sosina-Tatyana.TetsThirdCoordinator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,19 +460,19 @@
 				INFOPLIST_FILE = TetsThirdCoordinator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Sosina-Tatyana.TetsThirdCoordinator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
